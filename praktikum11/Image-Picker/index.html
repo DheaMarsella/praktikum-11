@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            width: 500px;
+            height: 300px;
+            margin: 50px 350px;
+        }
+
+        .box{
+            display: flex;
+            justify-content: center;
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+
+    <script>
+        function image_picker(){
+            let pilihan = document.getElementById("option");
+            const list_image = ["bison.jpg", "badak.png", "elang.jpg", "jerapah.jpg", "kucing.png", "panda.png", "singa.png"];
+            if(pilihan.value == "bison"){
+                let select = list_image[0];
+                document.getElementById("image").src = `image/${select}`
+                alert("Ini gambar Bison")
+            }
+
+            if(pilihan.value == "badak"){
+                let select = list_image[1];
+                document.getElementById("image").src = `image/${select}`
+                alert("Ini gambar Badak")
+            }
+
+            if(pilihan.value == "elang"){
+                let select = list_image[2];
+                documen.getElementById("image").src = `image/${select}`
+                alert("Ini gambar Elang")
+            }
+
+            if(pilihan.value == "jerapah"){
+                let select = list_image[3];
+                document.getElementById("image").src = `image/${select}`
+                alert("Ini gambar Jerapah")
+            }
+        }
+    </script>
+</head>
+<body>
+    <select name="" id="option" onchange="image_picker()">
+        <option value="">Pilih Gambar : </option>
+        <option value="bison">Bison</option>
+        <option value="singa">Singa</option>
+        <option value="jerapah">Jerapah</option>
+        <option value="kucing">Kucing</option>
+        <option value="elang">Elang</option>
+        <option value="badak">Badak</option>
+        <option value="panda">Panda</option>
+    </select>
+
+    <br>
+
+    <div class="container">
+        <div class="box">
+            <img id="image">
+        </div>
+    </div>
+</body>
+</html>
